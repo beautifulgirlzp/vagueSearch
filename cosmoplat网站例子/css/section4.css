@@ -1,0 +1,234 @@
+  #section4 {
+      overflow: hidden;
+      text-align: center;
+      color: #fff;
+      perspective: 340px;
+  }
+  
+  #section4 .content {
+      position: relative;
+      bottom: 5%;
+      width: 512px;
+      height: 650px;
+      margin: 0 auto;
+  }
+  
+  #section4 .content .lineriver {
+      position: absolute;
+  }
+  
+  #section4 .content .lineriver.line-1 {
+      width: 10%;
+      top: 10%;
+      left: 15%;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.45s;
+  }
+  
+  .active.section4 .content .lineriver.line-1 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-2 {
+      width: 32%;
+      top: 27%;
+      left: 15%;
+      z-index: 2;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.5s;
+  }
+  
+  .active.section4 .content .lineriver.line-2 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-3 {
+      width: 32%;
+      top: 27%;
+      left: 37.5%;
+      z-index: 3;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.55s;
+  }
+  
+  .active.section4 .content .lineriver.line-3 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-4 {
+      width: 10%;
+      top: 27%;
+      left: 59.5%;
+      z-index: 4;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.6s;
+  }
+  
+  .active.section4 .content .lineriver.line-4 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-5 {
+      width: 32%;
+      bottom: 26.5%;
+      right: 8.5%;
+      z-index: 5;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.65s;
+  }
+  
+  .active.section4 .content .lineriver.line-5 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-6 {
+      width: 41%;
+      bottom: 11.5%;
+      right: 8.5%;
+      z-index: 6;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.7s;
+  }
+  
+  .active.section4 .content .lineriver.line-6 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-7 {
+      width: 33%;
+      bottom: 11.5%;
+      right: 41%;
+      z-index: 8;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.75s;
+  }
+  
+  .active.section4 .content .lineriver.line-7 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-8 {
+      width: 10%;
+      bottom: 8.5%;
+      left: 25.8%;
+      z-index: 7;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.8s;
+  }
+  
+  .active.section4 .content .lineriver.line-8 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver.line-9 {
+      width: 30%;
+      bottom: -0.5%;
+      left: 6%;
+      z-index: 6;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.85s;
+  }
+  
+  .active.section4 .content .lineriver.line-9 {
+      opacity: 1 !important;
+  }
+  
+  #section4 .content .lineriver img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  #section4 .content .line-1 .line-log-1 {
+      position: absolute;
+      top: -40%;
+      left: 24%;
+      width: 50%;
+      transition: transform 0.45s ease 0.55s;
+  }
+  
+  .active.section4 .content .line-1 .line-log-1 {
+      transform: translateY(80%);
+  }
+  
+  #section4 .content .line-1 .line-log-1 span {
+      position: absolute;
+      width: 500%;
+      top: 13%;
+      right: 20%;
+      font-size: 12px;
+  }
+  
+  #section4 .content .line-4 .line-log-2 {
+      position: absolute;
+      top: -30%;
+      left: 24%;
+      width: 60%;
+      transition: transform 0.45s ease 0.65s;
+  }
+  
+  .active.section4 .content .line-4 .line-log-2 {
+      transform: translateY(80%);
+  }
+  
+  #section4 .content .line-4 .line-log-2 span {
+      position: absolute;
+      width: 500%;
+      top: 13%;
+      left: 5%;
+      font-size: 13px;
+  }
+  
+  #section4 .content .line-6 .line-log-3 {
+      position: absolute;
+      top: -50%;
+      right: 0;
+      width: 20%;
+      transition: transform 0.45s ease 0.65s;
+  }
+  
+  .active.section4 .content .line-6 .line-log-3 {
+      transform: translateY(45%);
+  }
+  
+  #section4 .content .line-6 .line-log-3 span {
+      position: absolute;
+      width: 500%;
+      top: 20%;
+      left: 0;
+      font-size: 14px;
+  }
+  
+  #section4 .content .lineriver.line-9 .line-log-4 {
+      position: absolute;
+      bottom: 50%;
+      left: -14%;
+      width: 60%;
+      transition: transform 0.45s ease 0.9s;
+  }
+  
+  .active.section4 .content .line-9 .line-log-4 {
+      transform: translateY(15%);
+  }
+  
+  #section4 .content .line-9 .line-log-4 span {
+      position: absolute;
+      width: 200%;
+      top: 20%;
+      right: 70%;
+      font-size: 15px;
+  }
+  
+  #section4 .content .line-9 .line-log-4 .list {
+      position: absolute;
+      width: 200%;
+      top: 44%;
+      right: 50%;
+      font-size: 12px;
+  }
+  
+  #section4 .content .line-9 .line-log-4 p {
+      padding: 0;
+      margin: 2px 0;
+  }

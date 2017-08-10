@@ -1,0 +1,446 @@
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#addbuy {
+    position: absolute;
+    display: none;
+}
+
+#addsell {
+    position: absolute;
+    display: none;
+}
+
+#adddevelopment {
+    position: absolute;
+    display: none;
+}
+
+h1,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.next-page {
+    width: 5% !important;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 100;
+}
+
+body {
+    font-family: "å¾®è½¯é›…é»‘", Arial, Tahoma, sans-serif
+}
+
+.title-icon-right {
+    border-radius: 100px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.title-icon-right:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 49%;
+    right: -24px;
+}
+
+.title-icon-left {
+    border-radius: 100px;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.title-icon-left:after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    top: 49%;
+    left: -24px;
+}
+
+#section {
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    perspective: 340px;
+}
+
+.section-con {
+    position: relative;
+    bottom: 5%;
+    height: 88%;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-layer {
+    background: url('../images/page0/back.png') center no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    height: 80%;
+    left: 0;
+    right: 0;
+    top: 18%;
+    margin: 20px auto 0;
+    z-index: 2;
+}
+
+.section-layer .centerbuy {
+    width: 9%;
+    position: absolute;
+    top: 30%;
+    left: -10%;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .centersell {
+    width: 9%;
+    position: absolute;
+    top: 35%;
+    left: 2%;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .centerdevelopment {
+    width: 9%;
+    position: absolute;
+    top: 28%;
+    left: 11%;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .centerbuy:hover {
+    transform: scale(1.2, 1.2)
+}
+
+.section-layer .centerbuy {
+    transition: transform .1s linear;
+}
+
+.section-layer .centersell:hover {
+    transform: scale(1.2, 1.2)
+}
+
+.section-layer .centersell {
+    transition: transform .1s linear;
+}
+
+.section-layer .centerdevelopment:hover {
+    transform: scale(1.2, 1.2)
+}
+
+.section-layer .centerdevelopment {
+    transition: transform .1s linear;
+}
+
+.section-layer .layer {
+    width: 13%;
+    position: absolute;
+}
+
+.section-layer .layer .text {
+    position: absolute;
+    width: 75px;
+    height: 30px;
+}
+
+.section-layer .img1 {
+    width: 40%;
+}
+
+.section-layer .img2 {
+    width: 25%;
+}
+
+.section-layer .img3 {
+    width: 12%;
+}
+
+.section-layer .layer .img1 {
+    transition: transform .3s linear;
+}
+
+.section-layer .layer .img2 {
+    transition: transform .1s linear;
+}
+
+.section-layer .layer .img3 {
+    transition: transform .1s linear;
+}
+
+.section-layer .layer .img1:hover {
+    transform: scale(1.5, 1.5)
+}
+
+.section-layer .layer .img2:hover {
+    transform: scale(1.5, 1.5)
+}
+
+.section-layer .layer .img3:hover {
+    transform: scale(1.5, 1.5)
+}
+
+.section-layer .layer1 {
+    top: 66%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer1 .text {
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.section-layer .layer2 {
+    top: 58%;
+    left: 27%;
+}
+
+.section-layer .layer2 .img2 {
+    position: absolute;
+    top: 100%;
+    left: 2%;
+}
+
+.section-layer .layer2 .img3 {
+    position: absolute;
+    top: 150%;
+    left: -10%;
+}
+
+.section-layer .layer2 .text {
+    bottom: 9%;
+    left: 27%;
+}
+
+.section-layer .layer3 {
+    top: 35%;
+    left: 19%;
+}
+
+.section-layer .layer3 .img2 {
+    position: absolute;
+    left: -13%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer3 .img3 {
+    position: absolute;
+    left: -50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer3 .text {
+    left: 25%;
+    top: 50%;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer4 {
+    top: 13%;
+    left: 27%;
+}
+
+.section-layer .layer4 .img2 {
+    position: absolute;
+    left: 5%;
+    top: -10%;
+}
+
+.section-layer .layer4 .img3 {
+    position: absolute;
+    left: -10%;
+    top: -20%;
+}
+
+.section-layer .layer4 .text {
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer5 {
+    top: 4%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer5 .img2 {
+    position: absolute;
+    top: -12%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer5 .img3 {
+    position: absolute;
+    top: -22%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer5 .text {
+    top: 55%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer6 {
+    top: 13%;
+    right: 27%;
+}
+
+.section-layer .layer6 .img2 {
+    position: absolute;
+    right: 5%;
+    top: -10%;
+}
+
+.section-layer .layer6 .img3 {
+    position: absolute;
+    right: -10%;
+    top: -20%;
+}
+
+.section-layer .layer6 .text {
+    top: 58%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.section-layer .layer7 {
+    top: 35%;
+    right: 19%;
+}
+
+.section-layer .layer7 .img2 {
+    position: absolute;
+    right: -13%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer7 .img3 {
+    position: absolute;
+    right: -50%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer7 .text {
+    right: 25%;
+    top: 40%;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-layer .layer8 {
+    top: 58%;
+    right: 27%;
+}
+
+.section-layer .layer8 .img2 {
+    position: absolute;
+    top: 100%;
+    right: 2%;
+}
+
+.section-layer .layer8 .img3 {
+    position: absolute;
+    top: 150%;
+    right: -10%;
+}
+
+.section-layer .layer8 .text {
+    bottom: 10%;
+    right: 25%;
+}
+
+.radar {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    z-index: 1;
+}
+
+.w1 {
+    background-color: #fff;
+    position: relative;
+    top: -4px;
+    width: 1px;
+}
+
+.linepageone {
+    background: rgba(0, 0, 0, 0);
+    border-left: 0px solid rgba(255, 255, 255, 0.6);
+    height: 360px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0 0;
+    width: 150px;
+}
+
+.roundMove {
+    animation: 5s linear 0s normal both infinite running round;
+}
+
+@keyframes round {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes round {
+    100% {
+        transform: rotate(360deg);
+    }
+}

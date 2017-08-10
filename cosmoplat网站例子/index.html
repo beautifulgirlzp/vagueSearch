@@ -1,0 +1,494 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html charset=utf-8" />
+    <title>COSMOPlat</title>
+    <link rel="stylesheet" type="text/css" href="./libs/jquery.fullpage.css" />
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/section0.css">
+    <link rel="stylesheet" href="./css/section1.css">
+    <link rel="stylesheet" href="./css/section2.css">
+    <link rel="stylesheet" href="./css/section3.css">
+    <link rel="stylesheet" href="./css/section4.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/jquery-ui.min.js"></script>
+    <script src="./libs/jquery.fullpage.js"></script>
+    <script src='./index.js'></script>
+</head>
+<link rel="stylesheet" href="css/background.css">
+<link rel="stylesheet" href="css/component.css" />
+<link rel="stylesheet" href="css/text.css" />
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class='section active' id='section'>
+            <div class='section-con'>
+                <h1>COSMOPlat</h1>
+                <h3>大规模定制下的工业新生态</h3>
+                <div class='section-layer'>
+                    <div id="3Dbuy">
+                        <a target="_blank">
+                            <img class="centerbuy" src="./images/page0/centerbuy.jpg">
+                        </a>
+                    </div>
+                    <div id="addbuy">
+                        <!-- <b>我是买家</b> <br>您在这里可以发布需求，寻求服务。 -->
+                    </div>
+
+                    <div id="3Dsell">
+                        <a target="_blank">
+                            <img class="centersell" src="./images/page0/centersell.jpg">
+                        </a>
+                    </div>
+                    <div id="addsell">
+                        <!-- <b>我是卖家</b> <br>您在这里可以发布能力，实施服务。 -->
+                    </div>
+
+                    <div id="3Ddevelopment">
+                        <a target="_blank">
+                            <img class="centerdevelopment" src="./images/page0/centerdevelopment.jpg">
+                        </a>
+                    </div>
+                    <div id="adddevelopment">
+                        <!-- <b>我是开发者</b><br> 您在这里可以成为一个创世者。 -->
+                    </div>
+
+                    <div class='layer layer1'>
+                        <a target="_blank" href="./cosmo.html"><img class='img1' src="./images/page0/3-1.png"></a><br/>
+                        <img class='img2' src="./images/page0/3-2.png"><br/>
+                        <img class='img3' src="./images/page0/3-3.png">
+                        <span class='text'>智慧服务</span>
+                    </div>
+                    <div class='layer layer2'>
+                        <a target="_blank" href="http://www.haieruplus.com/"><img class='img1' src="./images/page0/2-1.png"></a>
+                        <img class='img2' src="./images/page0/2-2.png">
+                        <img class='img3' src="./images/page0/2-3.png">
+                        <span class='text'>智能网器</span>
+                    </div>
+                    <div class='layer layer3'>
+                        <a target="_blank" href="http://diy.haier.com/"><img class='img1' src="./images/page0/1-1.png"></a>
+                        <img class='img2' src="./images/page0/1-2.png">
+                        <img class='img3' src="./images/page0/1-3.png">
+                        <span class='text'>用户交互</span>
+                    </div>
+                    <div class='layer layer4'>
+                        <a target="_blank" href="http://hope.haier.com/"><img class='img1' src="./images/page0/8-1.png"></a>
+                        <img class='img2' src="./images/page0/8-2.png">
+                        <img class='img3' src="./images/page0/8-3.png">
+                        <span class='text'>迭代设计</span>
+                    </div>
+                    <div class='layer layer5'>
+                        <a target='_blank' href="./scrm.html"><img class='img1' src="./images/page0/7-1.png"></a>
+                        <img class='img2' src="./images/page0/7-2.png">
+                        <img class='img3' src="./images/page0/7-3.png">
+                        <span class='text'>数字营销</span>
+                    </div>
+                    <div class='layer layer6'>
+                        <a target="_blank" href="http://l.ihaier.com/new_supplier_series/data_value_all"><img class='img1' src="./images/page0/6-1.png"></a>
+                        <img class='img2' src="./images/page0/6-2.png">
+                        <img class='img3' src="./images/page0/6-3.png">
+                        <span class='text'>模块采购</span>
+                    </div>
+                    <div class='layer layer7'>
+                        <a target="_blank" href="./im.html"><img class='img1' src="./images/page0/5-1.png"></a>
+                        <img class='img2' src="./images/page0/5-2.png">
+                        <img class='img3' src="./images/page0/5-3.png">
+                        <span class='text'>智能生产</span>
+                    </div>
+                    <div class='layer layer8'>
+                        <a target="_blank" href="http://www.rrskx.com/cloudData/index-v2"><img class='img1' src="./images/page0/4-1.png"></a>
+                        <img class='img2' src="./images/page0/4-2.png">
+                        <img class='img3' src="./images/page0/4-3.png">
+                        <span class='text'>智慧物流</span>
+                    </div>
+                </div>
+
+                <div class="radar">
+                    <img class="linepageone roundMove" src="./images/page0/pointer.jpg">
+                </div>
+            </div>
+            <div class="component">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+            </div>
+            <script src="js/TweenLite.min.js"></script>
+            <script src="js/EasePack.min.js"></script>
+            <script src="js/rAF.js"></script>
+            <script src="js/demo-1.js"></script>
+            <div class="stars4">
+            </div>
+            <script src="js/prefixfree.min.js"></script>
+            <a href="#page1"><img class='next-page' src="./images/scroll.png"></a>
+        </div>
+        <div class="section section1" id="section1">
+            <div class="container">
+                <div class="content">
+                    <div class="top">
+                        <img src="./images/page1/1-1.png">
+                        <div class="other">
+
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/1-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/1-3.png" alt="light">
+                                </div>
+                            </div>
+
+                            <div class="title-module">
+                                <img src="./images/page2/interface.png" alt="interface">
+                            </div>
+                            <!-- 点击按钮 -->
+                            <div class="actions js-show-line">
+                                <i></i>
+                                <i class="vertical"></i>
+                            </div>
+                            <div class="lines two">
+                                <img src="./images/page2/line1.png" alt="light">
+                            </div>
+                            <div class="tip">
+                                <p class="tip-title">增值服务</p>
+                                <p class="tip-content">产品智能化，通过传感数据和大数据分析，结合产品用户使用场景，开发增值的用户体验，实现持续的用户交互和所带来的持续盈利场景。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <img src="./images/page1/2-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/2-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/2-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/engine.png" alt="interface">
+                            </div>
+                            <!-- 点击按钮 -->
+                            <div class="actions js-show-line">
+                                <i></i>
+                                <i class="vertical"></i>
+                            </div>
+                            <div class="lines one">
+                                <img src="./images/page2/line2-1.png" alt="light">
+                            </div>
+                            <div class="lines two">
+                                <img src="./images/page2/line2-2.png" alt="light">
+                            </div>
+                            <div class="tip">
+                                <p class="tip-title">众创定制</p>
+                                <p class="tip-content">从创意到变现，平台提供专业的设计和工程技术资源，提供产品工艺、模块采购、市场预测等专业服务孵化众创项目和个性化定制变现。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <img src="./images/page1/3-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/3-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/3-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/factory.jpg" alt="interface">
+                            </div>
+                            <!-- 点击按钮 -->
+                            <div class="actions js-show-line">
+                                <i></i>
+                                <i class="vertical"></i>
+                            </div>
+                            <div class="lines one">
+                                <img src="./images/page2/line3-1.png" alt="light">
+                            </div>
+                            <div class="tip">
+                                <p class="tip-title">预测维保</p>
+                                <p class="tip-content">采集设备的实时数据，结合设备机理分析和建模，实现预测性维护，提升效率降低成本。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stars4">
+            </div>
+            <script src="js/prefixfree.min.js"></script>
+            <a href="#page2"><img class='next-page' src="./images/scroll.png"></a>
+        </div>
+
+
+
+        <div class="section section2" id="section2">
+            <div class="container">
+                <div class="content">
+                    <div class="top">
+                        <img src="./images/page1/1-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/1-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/1-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/interface.png" alt="interface">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <img src="./images/page1/2-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/2-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/2-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/engine.png" alt="interface">
+                            </div>
+                            <div class="tip-module">
+                                <div class="tip-module-top">
+                                    <p class="tip-m-title">产品增值</p>
+                                    <p class="tip-m-content">通过智能物联解决方案，延伸产品的应用场景，提升用户使用体验，并保障产品全生命周期的透明可视，实现可持续盈利。</p>
+                                </div>
+                                <div class="tip-module-bottom">
+                                    <p class="tip-m-title">体验迭代</p>
+                                    <p class="tip-m-content">通过对用户行为数据和智能产品数据的采集，对产品的设计和性能结合用户个性需求不断调优，使用户持续服务和体验持续迭代。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <img src="./images/page1/3-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/3-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/3-3.png" alt="light">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stars4">
+            </div>
+            <script src="js/prefixfree.min.js"></script>
+            <a href="#page3"><img class='next-page' src="./images/scroll.png"></a>
+        </div>
+
+        <div class="section section3" id="section3">
+            <div class="container">
+                <div class="content">
+                    <div class="top">
+                        <img src="./images/page1/1-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/1-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/1-3.png" alt="light">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle">
+                        <img src="./images/page1/2-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/2-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/2-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/engine.png" alt="interface">
+                            </div>
+                            <div class="tip-module">
+                                <div class="tip-module-top">
+                                    <p class="tip-m-title">资产管理</p>
+                                    <p class="tip-m-content">建立设备资产的数字化镜像，并通过设备资产数据的实时采集，实现资产在线实时监测和管理，并根据资产模型和运行大数据，实现资产效率的优化。</p>
+                                </div>
+                                <div class="tip-module-bottom">
+                                    <p class="tip-m-title">智能制造</p>
+                                    <p class="tip-m-content">通过物联网技术，实现人机物的互联协作，连接设备、人员、流程、工厂数据的接入和监测分析，实现大规模定制的高精度与高效率。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <img src="./images/page1/3-1.png">
+                        <div class="other">
+                            <div class="center-top">
+                                <div class="light">
+                                    <img src="./images/page1/3-2.png" alt="light">
+                                </div>
+                                <div class="line">
+                                    <img src="./images/page1/3-3.png" alt="light">
+                                </div>
+                            </div>
+                            <div class="title-module">
+                                <img src="./images/page2/factory.jpg" alt="interface">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stars4">
+            </div>
+            <script src="js/prefixfree.min.js"></script>
+            <a href="#page4"><img class='next-page' src="./images/scroll.png"></a>
+        </div>
+
+        <div class="section section4" id="section4">
+            <div class="content">
+                <div class="lineriver line-1">
+                    <img src="./images/page3/1.png" alt="light">
+                    <div class="line-log-1">
+                        <img src="./images/page3/1-1.png" alt="标注">
+                        <span>原料提供时代</span>
+                    </div>
+                </div>
+                <div class="lineriver line-2">
+                    <img src="./images/page3/2.png" alt="light">
+                </div>
+                <div class="lineriver line-3">
+                    <img src="./images/page3/3.png" alt="light">
+                </div>
+                <div class="lineriver line-4">
+                    <img src="./images/page3/4.png" alt="light">
+                    <div class="line-log-2">
+                        <img src="./images/page3/1-2.png" alt="标注">
+                        <span>产品制造时代</span>
+                    </div>
+                </div>
+                <div class="lineriver line-5">
+                    <img src="./images/page3/5.png" alt="light">
+                </div>
+                <div class="lineriver line-6">
+                    <img src="./images/page3/6.png" alt="light">
+                    <div class="line-log-3">
+                        <img src="./images/page3/1-3.png" alt="标注">
+                        <span>精益服务时代</span>
+                    </div>
+                </div>
+                <div class="lineriver line-7">
+                    <img src="./images/page3/7.png" alt="light">
+                </div>
+                <div class="lineriver line-8">
+                    <img src="./images/page3/8.png" alt="light">
+                </div>
+                <div class="lineriver line-9">
+                    <img src="./images/page3/9.png" alt="light">
+                    <div class="line-log-4">
+                        <img src="./images/page3/1-4.png" alt="标注">
+                        <span>体验迭代时代</span>
+                        <div class="list">
+                            <p>产品增值</p>
+                            <p>资产管理</p>
+                            <p>体验迭代</p>
+                            <p>智能制造</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="stars4">
+                </div>
+                <script src="js/prefixfree.min.js"></script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<script>
+    $(document).mousemove(function(event) {
+        var cx = Math.ceil($(document).width() / 2.0);
+        var cy = Math.ceil($(document).height() / 2.0);
+        var dx = event.pageX - cx;
+        var dy = event.pageY - cy;
+
+        var tiltX = (dy / cy);
+        var tiltY = -(dx / cx);
+        var radius = Math.sqrt(Math.pow(tiltX, 2) + Math.pow(tiltY, 2));
+        var degree = (radius * 40);
+        if (degree > 20)
+            degree = 20;
+
+        $(".line").css('transform', 'rotate3d(' + tiltX + ', ' + tiltY +
+            ', 0, ' + degree + 'deg)');
+    });
+</script>
+
+
+
+
+<script>
+    $(document).mousemove(function(event) {
+        var cx = Math.ceil($(document).width() / 2.0);
+        var cy = Math.ceil($(document).height() / 2.0);
+        var dx = event.pageX - cx;
+        var dy = event.pageY - cy;
+
+        var tiltX = (dy / cy);
+        var tiltY = -(dx / cx);
+        var radius = Math.sqrt(Math.pow(tiltX, 2) + Math.pow(tiltY, 2));
+        var degree = (radius * 40);
+        if (degree > 20)
+            degree = 20;
+
+        $(".section-layer").css('transform', 'rotate3d(' + tiltX + ', ' + tiltY +
+            ', 0, ' + degree + 'deg)');
+    });
+</script>
+
+
+<script>
+    window.onload = function() {
+        var ms = document.getElementById("3Dbuy");
+        var add = document.getElementById("addbuy");
+        var msa = document.getElementById("3Dsell");
+        var adda = document.getElementById("addsell");
+        var msb = document.getElementById("3Ddevelopment");
+        var addb = document.getElementById("adddevelopment");
+        ms.onmouseover = function() {
+            add.style.display = "block";
+        };
+        ms.onmouseout = function() {
+            add.style.display = "none";
+        };
+        msa.onmouseover = function() {
+            adda.style.display = "block";
+        };
+        msa.onmouseout = function() {
+            adda.style.display = "none";
+        };
+        msb.onmouseover = function() {
+            addb.style.display = "block";
+        };
+        msb.onmouseout = function() {
+            addb.style.display = "none";
+        };
+    };
+</script>
