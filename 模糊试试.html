@@ -1,0 +1,173 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>js/jQuery实现类似百度搜索功能</title>
+    <meta name="Author" content="Michael">
+    <meta name="Keywords" content="js/jQuery实现类似百度搜索功能">
+    <meta name="Description" content="js/jQuery实现类似百度搜索功能,可用键盘控制">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style type="text/css">
+    #container {
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+
+    #content {
+        width: 300px;
+        position: relative;
+    }
+
+    input {
+        border: 0;
+        width: 288px;
+        height: 30px;
+        font-size: 16px;
+        padding: 0 5px;
+        line-height: 30px;
+    }
+
+    .item {
+        padding: 3px 5px;
+        cursor: pointer;
+    }
+
+    .addbg {
+        background: #87A900;
+    }
+
+    .first {
+        border: solid #87A900 2px;
+        width: 300px;
+    }
+
+    #append {
+        border: solid #87A900 2px;
+        border-top: 0;
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 72px;
+        left: 0px;
+        z-index: 10;
+        max-height: 200px;
+        overflow: auto;
+        background-color: #fff;
+    }
+    #kw{
+        width: 100%;
+    }
+    input:focus {outline: none;}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="content">
+            <p class="biaodan-name">设备位号：</p>
+            <div class="first">
+                <input id="kw" onKeyup="getContent(this);" />
+            </div>
+            <div id="append"></div>
+        </div>
+        <div>
+            <p class="biaodan-name">设备名称：</p>
+            <div class="first">
+                <input type="text" name="" value="" placeholder="请输入">
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var data = null;
+        var url = "http://10.238.225.36:8080/eqp/api/equipments/ecep?deviceId=1&pageNo=1&pageSize=999";
+        $.ajax({
+            type: "get",
+            url: url,
+            dataType: "json",
+            success: function(rs){
+                data = rs.data;
+                //模糊搜索data中的equipmentItem
+            }
+        });
+    $(document).ready(function() {
+        $(document).keydown(function(e) {
+            e = e || window.event;
+            var keycode = e.which ? e.which : e.keyCode;
+            if (keycode == 38) {
+                if (jQuery.trim($("#append").html()) == "") {
+                    return;
+                }
+                movePrev();
+            } else if (keycode == 40) {
+                if (jQuery.trim($("#append").html()) == "") {
+                    return;
+                }
+                $("#kw").blur();
+                if ($(".item").hasClass("addbg")) {
+                    moveNext();
+                } else {
+                    $(".item").removeClass('addbg').eq(0).addClass('addbg');
+                }
+            } else if (keycode == 13) {
+                dojob();
+            }
+        });
+        var movePrev = function() {
+            $("#kw").blur();
+            var index = $(".addbg").prevAll().length;
+            if (index == 0) {
+                $(".item").removeClass('addbg').eq($(".item").length - 1).addClass('addbg');
+            } else {
+                $(".item").removeClass('addbg').eq(index - 1).addClass('addbg');
+            }
+        }
+        var moveNext = function() {
+            var index = $(".addbg").prevAll().length;
+            if (index == $(".item").length - 1) {
+                $(".item").removeClass('addbg').eq(0).addClass('addbg');
+            } else {
+                $(".item").removeClass('addbg').eq(index + 1).addClass('addbg');
+            }
+        }
+        var dojob = function() {
+            $("#kw").blur();
+            var value = $(".addbg").text();
+            $("#kw").val(value);
+            $("#append").hide().html("");
+        }
+    });
+
+    function getContent(obj) {
+        var kw = jQuery.trim($(obj).val());
+        if (kw == "") {
+            $("#append").hide().html("");
+            return false;
+        }
+        var html = "";
+        for (var i = 0; i < data.length; i++) {
+            if (data[i].equipmentItem.indexOf(kw) >= 0) {
+                html = html + "<div class='item' onmouseenter='getFocus(this)' onClick='getCon(this);'>" + data[i].equipmentItem + "</div>"
+            }
+        }
+        if (html != "") {
+            $("#append").show().html(html);
+        } else {
+            $("#append").hide().html("");
+        }
+    }
+
+    function getFocus(obj) {
+        $(".item").removeClass("addbg");
+        $(obj).addClass("addbg");
+    }
+
+    function getCon(obj) {
+        var value = $(obj).text();
+        $("#kw").val(value);
+        $("#append").hide().html("");
+    }
+    </script>
+</body>
+
+</html>

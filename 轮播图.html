@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/ues.css">
+    <style>
+    .container{height:400px;overflow: hidden;}
+    .slider{float: left;display: none;}
+    .slider img{width: 100%;height:auto;}
+    .yuandian{width: 10px;height:10px;border-radius: 10px;background-color: red;float: left;margin-right:20px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="slider" id="s1">
+            <img src="images/banner1.jpg">
+        </div>
+        <div class="slider" id="s2">
+            <img src="images/banner2.jpg">
+        </div>
+        <div class="slider" id="s3">
+            <img src="images/banner3.jpg">
+        </div>
+        <div class="slider" id="s4">
+            <img src="images/banner4.jpg">
+        </div>
+    </div>
+    <div>
+        <span onclick="last()"><</span>
+        <span onclick="next()">></span>
+    </div>
+
+    <div>
+        <div class="yuandian" num="1"></div>
+        <div class="yuandian" num="2"></div>
+        <div class="yuandian" num="3"></div>
+        <div class="yuandian" num="4"></div>
+    </div>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        var s = 0;
+        var i = 0;
+        var a = 0;
+        $(function(){
+            $(".slider").width($(window).width());
+            $(".container").width($(window).width()*($(".container").children().length + 1));
+            $(".container").children().eq(0).fadeTo(1000,1);
+            s = setInterval(lunbo1,"2000");
+            $(".yuandian").on("click",function(){
+                $(".container").children().css("display","block");
+                clearInterval(s);
+                // $("#s"+$(this).attr("num")).prevAll().each(function(){
+                //     var li=$(this).clone();
+                //     $(".container").append(li);
+                //     $(this).remove();
+                // })
+                for(var i = $("#s" + $(this).attr("num")).prevAll().length - 1;i >- 1;i--){
+                    var li=$("#s"+$(this).attr("num")).prevAll().eq(i).clone();
+                    $(".container").append(li);
+                    $("#s" + $(this).attr("num")).prevAll().eq(i).remove();
+                }
+                    // $(".container").append($("#s"+$(this).attr("num")).prevAll());
+                    // $("#s"+$(this).attr("num")).prevAll().remove();
+                s = setInterval(lunbo1,"2000");
+                $(".container").children().css("display","none");
+                $(".container").children().eq(0).show();
+            })
+        })
+        function lunbo1(){
+            $(".container").children().eq(0).fadeTo(1000,0.5,function(){
+                var li = $(".container").children().eq(0).clone();
+                $(".container").children().eq(0).remove();
+                $(".container").append(li);
+                $(".container").children().eq(0).fadeTo(1000,1);
+                // $(".container").children().eq($(".container").children().length-1).css("display","none");
+            });
+        }
+        function last(){
+            if(a == 1){
+                return;
+            }
+            a = 1;
+            $(".container").children().css("display","block");
+            clearInterval(s);
+            $(".container").animate({'marginLeft':-$(window).width() + 'px'},1000,function(){               
+                    var li = $(".container").children().eq(0).clone();
+                    $(".container").children().eq(0).remove();
+                    $(".container").append(li);
+                    $(".container").css("marginLeft",0);
+                    s = setInterval(lunbo1,"2000");
+                    a = 0;
+                    $(".container").children().css("display","none");
+                    $(".container").children().eq(0).show();
+                });
+            
+            
+        }
+        function next(){
+            if(a == 1){
+                return;
+            }
+            a = 1;
+            $(".container").children().css("display","block");
+            clearInterval(s);
+            var li = $(".container").children().eq($(".container").children().length - 1).clone();
+            $(".container").css("marginLeft",-$(window).width() + 'px');
+            $(".container").prepend(li);
+            $(".container").animate({'marginLeft':0},1000,function(){             
+                    $(".container").children().eq($(".container").children().length -1).remove();
+                    s=setInterval(lunbo1,"2000");
+                    a=0;
+                    $(".container").children().css("display","none");
+                    $(".container").children().eq(0).show();
+                });
+        }
+    </script>
+</body>
+
+</html>
