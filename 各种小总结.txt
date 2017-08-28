@@ -1,0 +1,211 @@
+  第一个简单的：
+本页面<input type="text" name="maintext" id="test" style="display: none">
+下个需要上页面参数的页面：var areaCode = window.opener.document.all.maintext.value;
+
+第二个地址栏拼接的：
+本页面中
+    function Post()
+    {
+//单个值 Read.htm?username=baobao;
+//多全值 Read.htm?username=baobao&sex=male;
+        url = "compressor.htm?username="+escape(document.all.username.value);
+        url += "&sex=" + escape(document.all.sex.value);
+        url = "newjump.html?username="+escape(document.all.username.value) +"&sex=" + escape(document.all.sex.value);
+        location.href=url;
+    }
+下个需要上页面参数的页面：
+var url=location.search;
+    var Request = new Object();
+    if(url.indexOf("?")!=-1)
+    {
+        var str = url.substr(1);　//去掉?号
+        strs = str.split("&");
+        for(var i=0;i<strs.length;i++)
+        {
+            Request[strs[i ].split("=")[0]]=unescape(strs[ i].split("=")[1]);
+        }
+    }
+console.log(Request["username"]);
+console.log(Request["sex"]);
+
+
+用layer插件：
+本页面点击确定按钮把这个页面的东西：obj 传到下次打开的页面monthReport.html中；
+$('#sure').click(function(index){
+            var $year = $('#year').val();
+            var $month = $('#month').val();
+            var $name = $('#name').val();
+            var obj = {};
+            obj.year = $year;
+            obj.month = $month;
+            obj.name = $name;
+            $('#test').val(obj);
+            parent.layer.open({
+                type: 2,
+                title: ['新增腐蚀月报','background:#00aeff;font-size:16px;color:#fff;'],
+                shadeClose: false,
+                scrollbar: false,
+                shade: [0.2,'#000'],
+                area: ['96%','88%'],
+                content: 'monthReport.html',
+                success:function(layero, index){
+                    var body = layer.getChildFrame('body', index);
+                    var iframeWin = parent.window[layero.find('iframe')[0]['name']];
+                    iframeWin.$(".main_title").html(obj.name+obj.year + "年" + obj.month + "份腐蚀月报");
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                }
+            });
+        });
+
+
+字符串全局替换的
+String.prototype.replaceAll = function (FindText, RepText) { 
+regExp = new RegExp(FindText, “g”); 
+return this.replace(regExp, RepText); 
+}
+var str = '2016-09-19';
+var result = str.replaceAll('-','');
+console.log(result);
+...
+20160919
+
+
+eg：String remote = "F:\FTP\FTPServer";
+String fileName = remote.subString(remote.lastIndexOf("\")+1);
+String filePath = remote.subString(0 , remote.lastIndexOf("\")+1);
+结果：filaName------------"FTPServer"
+    filePath--------------"F:\FTP\"
+
+
+//返回url参数对象
+function zs_getUrlParamObj() {
+	var name,value,str,num,arr;
+	var retObj = {};
+	str = location.href.substr(location.href.indexOf("?")+1);
+	arr = str.split("&"); //各个参数放到数组里
+	for(var i=0;i < arr.length;i++){
+		num = arr[i].indexOf("=");
+		if(num > 0){
+			name = arr[i].substring(0,num);
+			value = arr[i].substr(num+1);
+			retObj[name] = value;
+		}
+	}
+	return retObj;
+}
+Url:zp.html+”?equipId=”+equip+ “&loopId=”+loopId;
+本页面中取。Obj = zs_getUrlParamObj();
+         Obj.equipId.   Obj.loopId;
+
+
+
+//去除字符串前面、后面、以及中间的空格符
+//参数str为要格式化的字符串，is_global是否去除字符串中间的所有空格
+function zs_trim(str,is_global){
+	return (is_global == true)?str.replace(/\s/g,""):str.replace(/(^\s+)|(\s+$)/g,"");
+}
+
+
+//指定对象数组中所有对象的某属性，将其属性作为一个新的数组返回
+function zs_retArrObjField(arr,field){
+	var retFieldArray = [];
+	if (arr.length > 0){
+		for (var i=0;i<arr.length;i++){
+			retFieldArray[i] = arr[i][field];
+		}
+	}
+	return retFieldArray;
+}
+
+
+//字符串中是否包含某字符串，str为字符串，substr为所要查找的字符串
+function zs_containsStr(str,substr){
+	return new RegExp(substr).test(str);
+}
+
+
+//将两个对象合并,如果有相同的属性则joinObj的属性将覆盖同名retObj的属性
+function zs_objMerge(retObj,joinObj){
+	for(var o in joinObj){
+		retObj[o] = joinObj[o];
+	}
+	return retObj;
+}
+
+
+//自动补充字符,padcode为被填充的字符串，padlength为填充的长度，padchar为填充的字符或数字
+function zs_padChar(padcode,padlength,padchar){
+	zs_parameterError([padcode,padlength],['string','number']);
+	zs_parameter_undefinedError([padchar]);
+	for (var i = padcode.length;i<padlength;i++){
+		padcode = padchar+padcode;
+	}
+    return padcode;
+}
+
+
+//获取当前时间，char为分隔符，例如zs_getNowDate('-')，结果为2015-1-1
+function zs_getNowDate(char){
+	var nowdate = new Date();
+	return nowdate.getFullYear()+char+(nowdate.getMonth()+1)+char+nowdate.getDate();
+}
+
+
+//去除数组所有重复元素
+function zs_arrayNoRepeat(arr) {
+    var result = [], hash = {};
+    for (var i = 0, elem; (elem = arr[i]) != null; i++) {
+        if (!hash[elem]) {
+            result.push(elem);
+            hash[elem] = true;
+        }
+    }
+    return result;
+}
+
+
+//验证数组元素重复,如果有一个元素重复则返回false
+function zs_isRepeat(arr){
+	var hash = {};
+	for(var i in arr){
+	    if(hash[arr[i]]){
+	    	return true;
+	    }
+        hash[arr[i]] = true;
+	 }
+	 return false;
+}
+
+
+//返回函数参数正文
+function zs_getFunctionArgsText(args_length){
+	var args = '';
+	for (var i = 0;i<args_length;i++){
+		args+="arguments["+i+"]";
+		if(i+1 < args_length){
+			args+=",";
+		}
+	}
+	return args;
+}
+
+
+//异常信息处理
+function zs_errorInformation(parameter){
+	throw new Error(parameter);
+}
+
+
+阻止浏览器默认行为：
+            if ( e && e.preventDefault )
+//阻止默认浏览器动作(W3C)
+                e.preventDefault();
+            else
+//IE中阻止函数器默认动作的方式
+                window.event.returnValue = false;
+            return false;
+
+
+cellvalue = 2015-10-12 10:10:11；
+cellvalue=/\d{4}-\d{1,2}-\d{1,2}/g.exec(cellvalue);//2015-10-12 10:10:11截取字符串年月日
